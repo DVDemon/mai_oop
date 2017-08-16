@@ -7,17 +7,17 @@ private:
 public:
     X(int value) : i(value) {};
     
-    //X& operator= (const X&) = delete;
-    //X(const X&) = delete;
+    X& operator= (const X&) = delete;
+    X(const X&) = delete;
     
 };
 
 int main(int argc, char** argv) {
 
     X a(1);
-    X b=a;
+    //X b=a;
     
-    b = a;
+    //b = a;
     
     return 0;
 }
