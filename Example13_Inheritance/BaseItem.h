@@ -13,7 +13,7 @@ class BaseItem : public Item {
 public:
     BaseItem();
     const char * GetMyName() override;
-    const char * GetMyOriginalName() override;
+    const char * GetMyOriginalName();
     virtual ~BaseItem();
 private:
 
