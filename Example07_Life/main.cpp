@@ -14,7 +14,7 @@ class Life
 public:
     Life() { std::cout << "I'm alive" << std::endl;}
     Life(const char* n) : Life() { name=n; std::cout<< "My name is " << name << std::endl;};
-    ~Life() { std::cout << "Oh no! I'm dead!" << std::endl;}
+    ~Life() { std::cout << "Oh no! I'm dead:" << name << std::endl;}
 private:
     std::string name;
 };
