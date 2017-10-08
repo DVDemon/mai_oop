@@ -6,7 +6,10 @@ void term_func() {
     exit(-1);
 }
 
+
 int main() {
+
+
     try {
         set_terminate(term_func);
         throw "Out of memory!"; // No catch handler for this exception

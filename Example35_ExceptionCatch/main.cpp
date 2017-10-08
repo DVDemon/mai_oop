@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
         
     }catch(std::exception ex){
         std::cout << "Да у тебя кредит!?" << std::endl;
-        //PrintCheck A(money); // А вот тут исключение уже не ловится
+        PrintCheck A(money); // А вот тут исключение уже не ловится
     }catch(int){
         std::cout << "Голытьба!" << std::endl;
     }

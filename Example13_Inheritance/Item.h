@@ -10,7 +10,7 @@
 
 class Item {
 public:
-virtual const char * GetMyName() = 0;
+  virtual const char * GetMyName() = 0;
 };
 
 #endif	/* ITEM_H */

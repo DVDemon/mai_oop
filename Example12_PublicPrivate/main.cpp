@@ -8,13 +8,14 @@
 #include <cstdlib>
 #include <iostream>
 
-class B;
+//class B;
 
 class A {
     friend B;
 private:
     int value;
 public:
+    
     A(int v) : value(v) {};
 };
 

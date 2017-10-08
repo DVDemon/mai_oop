@@ -11,13 +11,14 @@ using namespace std;
 
 class A {
 public:
-
     explicit A(int value) : _value(value) {
     };
 private:
     int _value;
 };
 
+void Foo(int a){    
+}
 void Foo(A a) {
 };
 

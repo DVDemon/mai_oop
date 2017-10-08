@@ -18,7 +18,7 @@ void swap(int &a, int &b)
 int main(int argc, char** argv) {
     
     int a=10,b=20;
-    swap(a,b);
+    swap(10,b);
     
     std::cout << "a=" << a << " ,b=" << b << std::endl;
 

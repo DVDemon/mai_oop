@@ -16,10 +16,19 @@ public:
     A(int a) : _value(a) {
     };
 
-    A operator()(int a) {
+    A& operator()(int a) {
         std::cout << _value + a << std::endl;
-
-        return A(_value + a);
+        _value+=a;
+        return *this;
+    }
+    A& operator()(int a,int b) {
+        std::cout << _value + a +b << std::endl;
+        _value+=a+b;
+        return *this;
+    }
+    A& operator++(int){
+        _value++;
+        return *this;
     }
 };
 
@@ -27,7 +36,9 @@ int main(int argc, char** argv) {
 
     A a(0);
 
-    a(1)(1)(1)(1);
+    a(1)++(2)++(4)++(8,2);
+
+    //for(int i=0;i<10;i++) a(1);
 
     a(0);
     

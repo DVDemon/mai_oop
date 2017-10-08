@@ -3,7 +3,7 @@
 
 class A{
 public:
-    virtual void foo() {//final{
+    virtual void foo() final{
         std::cout << "A" <<std::endl;
     }
     

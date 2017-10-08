@@ -16,7 +16,7 @@ public:
     }
 };
 
-class A : public Z {
+class A : virtual public  Z {
 public:
 
     void FooA() {
@@ -24,7 +24,7 @@ public:
     }
 };
 
-class B : public Z {
+class B : virtual public Z {
 public:
 
     void FooB() {
@@ -34,7 +34,7 @@ public:
 
 class C : public A, public B {
 public:
-//*
+/*
     void Foo() {
         std::cout << "Hello from C!\n";
     } // Try to comment!

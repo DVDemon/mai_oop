@@ -14,7 +14,7 @@ public:
         std::cout << "Copy exception constructed" << std::endl;
     }
 
-    virtual ~MyException() {
+     ~MyException() {
         std::cout << "Exception destructed" << std::endl;
     };
 };
@@ -23,9 +23,9 @@ void proc2(void) {
     try {
 
         std::cout << "Proc2 called" << std::endl;
-        std::string().at(1); // this generates an std::out_of_range
+        //std::string().at(1); // this generates an std::out_of_range
         //throw 7; //custom class
-        //throw MyException(100);
+        throw MyException(100);
 
     } catch (int ex1) {
         std::cout << "int in Proc2" << std::endl;

@@ -12,10 +12,10 @@
 int main(int argc, char** argv) {
     Rectangle rec(10,2);
     
-    rec.print();
+    ++(((rec++)++)++);
 
     std::cout << "Width=" << rec[0] << " Height=" << rec[1] << std::endl;
-    std::cout << "Square=" << (int)rec << std::endl;
+    std::cout << "Square=" << rec << std::endl;
     
     
     return 0;

@@ -11,7 +11,9 @@
 class Rectangle {
 public:
     Rectangle(int,int);
-    int        operator[](int i);
+    int      operator[](int i);
+    Rectangle operator++();
+    Rectangle operator++(int);
     operator int();
     void       print();
     virtual ~Rectangle();

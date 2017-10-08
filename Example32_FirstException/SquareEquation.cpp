@@ -14,7 +14,7 @@ SquareEquation::SquareEquation(double a, double b, double c) {
     SquareEquation::b = b;
     this->c = c;
     double d = (b * b - 4 * a * c);
-    if (d < 0) throw WrongEquationException(d);
+    if (d < 0) throw new WrongEquationException(d);
 }
 
 double SquareEquation::FindX1() {

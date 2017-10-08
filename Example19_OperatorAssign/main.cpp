@@ -23,10 +23,10 @@ public:
     }
 
     //*
-    Account & operator=(Account &other)
+    Account & operator=(const Account &other)
     {
             std::cout << "Assign Account =" << std::endl;
-            _balance = other._balance;
+            _balance = other._balance*0.87;
             return *this;
     }
     //*/
@@ -45,7 +45,7 @@ public:
 
     //*
 
-    Checking & operator=(Account &other) {
+    Checking & operator=(const Account &other) {
         std::cout << "Assign Checking" << std::endl;
         _balance = other._balance;
         _fOverdraftProtect = 0;
@@ -57,14 +57,14 @@ public:
 int main(int argc, char** argv) {
     Checking checking(1000, 1);
 
-    //std::cout << "Operations with account" << std::endl;
+    std::cout << "Operations with account" << std::endl;
     Account account;
     account = checking; 
-    //std::cout << "Account balance = " << account.getBalance() << std::endl;
+    std::cout << "Account balance = " << account.getBalance() << std::endl;
 
     checking = account;
 
-    //std::cout << "Checking balance = " << checking.getBalance() << std::endl;
+    std::cout << "Checking balance = " << checking.getBalance() << std::endl;
 
     return 0;
 }

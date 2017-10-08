@@ -9,11 +9,11 @@
 #include <math.h>
 
 
-SquareEquation::SquareEquation(double a,double b ,double c)
+SquareEquation::SquareEquation(double a,double b ,double cc)
 {
 	 this->a=a;
 	 SquareEquation::b=b;
-	 this->c =c;
+	 c =cc;
 }
 
 double SquareEquation::FindX1()

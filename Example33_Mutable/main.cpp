@@ -4,7 +4,7 @@
 class A{
 private:
     const int VALUE = 7;
-    mutable int counter = 0;
+     int counter = 0;
 public:
     const int get() const{
         counter++;

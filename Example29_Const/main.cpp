@@ -12,13 +12,13 @@ public:
 class A{
 public:
     int a;
-    void fooA(B& b) {//const{
+    void fooA(B b) const{
         b.fooB();
         fooA2();
-        a=7;
+        //a=7;
     }
     
-    void fooA2(){
+    void fooA2() const{
         
     }
 };

@@ -19,7 +19,7 @@ public:
         value = a;
     }
     
-    A(const A &a) :A() { value= a.value;}
+    A(const A &a) :A() { value= a.value;std::cout << "Вот оно что!" << std::endl;}
     int value;
 
 };
@@ -33,10 +33,10 @@ void cross(A a) {   std::cout << "Copy:" << a.value << std::endl;}
 int main(int argc, char** argv) {
 
     A a(5);
-    //over(a);
-    //over(A(7));
+    over(a);
+    over(A(7));
     
-    cross(a);
+    //cross(a);
 
 
 

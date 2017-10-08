@@ -11,7 +11,7 @@
 
 class Rectangle{
 public:
-    unsigned long width,height;
+     unsigned long width,height;
      Rectangle(int w,int h) : width(w),height(h) {};
 };
 
@@ -19,21 +19,22 @@ public:
     return Rectangle(w,w);
 }
 
-class Kg{
+class Massa{
 public:
     std::string number;
-    Kg(const char* str) : number(str) {};
+    Massa(const char* str) : number(str) {number+="kg";};
 };
-  Kg operator "" _kg (const char* str){
-    return Kg(str);
+Massa operator "" _kg (const char* str){
+    return Massa(str);
 }
 
 
 int main(int argc, char** argv) {
     Rectangle a=12_rect;
+    Massa b = 123_kg;
     
     std::cout << "Width=" << (10_rect).width << std::endl;
-    std::cout << (3_kg).number;
+    std::cout << (3_kg).number << std::endl;
     return 0;
 }
 

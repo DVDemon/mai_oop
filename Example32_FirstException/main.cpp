@@ -21,9 +21,10 @@ int main(int argc, char** argv) {
         std::cout << "X1=" << x1 << "\n";
         std::cout << "X2=" << x2 << "\n";
     } catch (WrongEquationException &ex) {
-        std::cout << std::endl << ex.what() << std::endl;
+        std::cout << std::endl << "WrongEquationException:" << ex.what() << std::endl;
     } catch (WrongEquationException* d) {
-        std::cout << std::endl << d->what() << std::endl;
+        std::cout << std::endl << "WrongEquationException*:"<< d->what() << std::endl;
+        delete d;
     }
     return 0;
 }

@@ -27,6 +27,14 @@ Rectangle::operator int() {
 
 }
 
+Rectangle Rectangle::operator++(int){
+    std::cout << "Hello:";
+    return *this;
+}
+Rectangle Rectangle::operator++(){
+    print();
+    return *this;
+}
 void Rectangle::print() {
     std::cout << "[" << _width << "," << _height << "]" << std::endl;
 }

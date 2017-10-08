@@ -17,9 +17,9 @@ public:
     int        operator[](int i);
     operator int();
 
-    friend std::ostream& operator <<(std::ostream &os,Rectangle &rec);
-    friend std::ostream& operator <<(std::ostream &os,Rectangle &&rec);
-    friend Rectangle     operator +(Rectangle &left, Rectangle &right);
+    friend std::ostream& operator <<(std::ostream &os,const Rectangle &rec);
+    //friend std::ostream& operator <<(std::ostream &os,const Rectangle &&rec);
+    //friend Rectangle     operator +(const Rectangle &left, const Rectangle &right);
     
     virtual ~Rectangle();
 private:

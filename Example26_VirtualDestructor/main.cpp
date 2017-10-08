@@ -12,7 +12,7 @@ public:
        foo(); 
     }
     
-     virtual ~Parent() {
+      ~Parent() {
         //foo();
         std::cout << "Parent" << std::endl;
     }

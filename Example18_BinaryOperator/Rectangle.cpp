@@ -46,19 +46,20 @@ Rectangle::operator int() {
 Rectangle::~Rectangle() {
 }
 
-std::ostream& operator<<(std::ostream &os, Rectangle &&rec) {
-    os << "[" << rec._width << "," << rec._height << "]";
+/*
+std::ostream& operator<<(std::ostream &os, const Rectangle &&rec) {
+    os << "(" << rec._width << "," << rec._height << ")";
     return os;
 
-}
+}*/
 
-std::ostream& operator<<(std::ostream &os, Rectangle &rec) {
+std::ostream& operator<<(std::ostream &os, const Rectangle &rec) {
     os << "[" << rec._width << "," << rec._height << "]" ;
     return os;
 
 }
-
-Rectangle operator+(Rectangle &left, Rectangle &right) {
+/*
+Rectangle operator+(const Rectangle &left, const Rectangle &right) {
     return Rectangle(left._width+right._width,left._height+right._height);
 
-}
+}*/

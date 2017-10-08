@@ -10,10 +10,14 @@
 #include "ChildItem.h"
 
 int main(int argc, char** argv) {
+
+
     ChildItem *pChild = new ChildItem();
     BaseItem *pBase = (BaseItem *) pChild;
 
-    pChild->foo();
+    //Item *ptr = pChild;
+   // ptr->GetMyName();
+    //pChild->foo();
 
     std::cout << "Child GetMyName:" << pChild->GetMyName() << std::endl;
     std::cout << "Child GetMyOriginalName:" << pChild->GetMyOriginalName() << std::endl;

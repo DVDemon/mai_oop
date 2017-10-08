@@ -3,7 +3,8 @@
 
 class A {
 private:
-    std::shared_ptr<A> next;
+    std::shared_ptr<A> next; // 
+    //A* next;
 public:
 
     A() {
@@ -11,7 +12,9 @@ public:
     }
     
     A(A* next_ptr) : A(){
+        std::cout << "O_o ";
         next = std::shared_ptr<A>(next_ptr);
+        //next = next_ptr;
     }
 
     void DoSomething() {
@@ -27,7 +30,7 @@ int main(int argc, char** argv) {
 
     std::shared_ptr<A> a(new A(new A(new A(new A()))));
     
-    a.reset(new A());
+    a.reset();
     std::cout << "Done" << std::endl;
     return 0;
 }

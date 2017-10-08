@@ -65,6 +65,9 @@ int main(int argc, char** argv) {
     out_file.close();
     delete src;
 
+    std::cout << "Press any key" << std::endl;
+    std::cin.get();
+
     std::ifstream in_file("buffer.txt");
     A* dst = new A(in_file);
     in_file.close();

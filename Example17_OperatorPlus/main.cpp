@@ -12,7 +12,7 @@
 int main(int argc, char** argv) {
     Rectangle rec(1,2);
     
-    //rec++++++++++++++++.print();
+    rec++++++++++++++++++++++++++++.print();
     
     //rec.print();
     //(rec++).print();

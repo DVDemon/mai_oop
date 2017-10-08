@@ -14,7 +14,7 @@ public:
 	double FindX1();
 	double FindX2();
 private:
-    	double a;
+    double a;
 	double b;
 	double c;
 };
