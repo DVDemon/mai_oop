@@ -4,12 +4,14 @@ template <class T> class SafeWorker {
 public:
 
     void action() {
+        std::cout << "Begin" << std::endl;
         try {
             //dynamic_cast<T*>(this)->action_impl();
             ((T*)this)->action_impl();
         } catch (...) {
             std::cout << "Unexpected exception" << std::endl;
         }
+        std::cout << "End" << std::endl;
     }
 
 };
@@ -32,14 +34,12 @@ public:
 
 int main(int argc, char** argv) {
 
-    SafeWorker<EvilWorker> zz;
-    zz.action();
-    
     GoodWorker g;
     g.action();
 
     EvilWorker e;
     e.action();
+   // e.action_impl();
 
     return 0;
 }

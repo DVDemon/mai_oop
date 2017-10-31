@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "__tuple": "cpp",
+        "tuple": "cpp",
+        "functional": "cpp",
+        "system_error": "cpp"
+    }
+}

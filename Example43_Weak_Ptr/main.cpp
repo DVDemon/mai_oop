@@ -58,10 +58,10 @@ int main(int argc, char** argv) {
 
         a->LetsLock(b);
         b->LetsLock(a);
-         std::cout << "Start printing ..." << std::endl;
-    b->Print();
+
     }
-   
+    std::cout << "Start printing ..." << std::endl;
+    b->Print();  
 
     return 0;
 }

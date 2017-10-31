@@ -22,6 +22,7 @@ public:
 private:
     std::shared_ptr<T> item;
     std::shared_ptr<TStackItem<T>> next;
+ //   std::weak_ptr<TStackItem<T>> prev;
 };
 
 #endif	/* TSTACKITEM_H */

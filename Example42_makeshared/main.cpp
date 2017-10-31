@@ -1,7 +1,13 @@
 #include <iostream>
 #include <memory>
 
+class A{
+public:
+  A(int a,int c){}
+};
+
 int main () {
+  std::shared_ptr<A> a=std::make_shared<A>(122,12);
 
   std::shared_ptr<int> foo = std::make_shared<int> (10);
   // same as:

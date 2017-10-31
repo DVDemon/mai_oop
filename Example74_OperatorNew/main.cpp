@@ -46,5 +46,7 @@ int main() {
     A* b = new("Hello world!") A(2);
     delete b;
 
+    b = new A(3);
+    delete b;
     return 0;
 }

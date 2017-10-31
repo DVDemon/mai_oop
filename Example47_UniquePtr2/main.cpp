@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
     //c=a; // no copy operator
 
     c= std::move(a);
-//    c->Print();
+    //c->Print();
     a->Print();
     
     return 0;

@@ -13,6 +13,7 @@ public:
     
     A(A* next_ptr) : A(){
         std::cout << "O_o ";
+
         next = std::shared_ptr<A>(next_ptr);
         //next = next_ptr;
     }
@@ -28,9 +29,12 @@ public:
 
 int main(int argc, char** argv) {
 
+    try{
     std::shared_ptr<A> a(new A(new A(new A(new A()))));
-    
-    a.reset();
+    }catch(...){
+        
+    }
+    //a.reset();
     std::cout << "Done" << std::endl;
     return 0;
 }

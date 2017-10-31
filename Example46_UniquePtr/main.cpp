@@ -30,10 +30,15 @@ std::unique_ptr<A> safe_function(){
     return a;
 }
 
+void foo(std::unique_ptr<A> & a){
+
+}
+
 int main(int argc, char** argv) {
     
     std::unique_ptr<A> a=safe_function();
-    std::unique_ptr<A> b=a;
+    //std::unique_ptr<A> b=a;
+    foo(a);
     
     //A* a = unsafe_function();
     a->Print();

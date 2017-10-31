@@ -30,12 +30,12 @@ int main(int argc, char** argv) {
 
     try{
         
-    //*
+    /*
     A *a=new A("A");
     foo(foofoofoo(),std::shared_ptr<A>(a));
     /*/
-    std::shared_ptr<A> a(new A("B"));
-    foo(foofoofoo(),a);
+    //std::shared_ptr<A> a(new A("B"));
+    foo(foofoofoo(),std::shared_ptr<A>(new A("B")));
     
     //*/
     

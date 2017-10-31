@@ -11,10 +11,11 @@ int main(int argc, char** argv) {
     array2[1]=2;
       
     //  не сработает, поскольку не определена длина массива
-    for(int i:array2) std::cout<< "[" << i << "]";
+    //for(int i:array2) std::cout<< "[" << i << "]";
     
-    delete array2;
+    delete[] array2;
     
+    std::cout << std::endl;
     return 0;
 }
 

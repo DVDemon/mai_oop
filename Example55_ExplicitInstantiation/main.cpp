@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
     delete item;
     
  
-    /*/
+    //*/
       
     
     MyStack<MyClass,&deleterMyClass> stack2;

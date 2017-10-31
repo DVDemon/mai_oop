@@ -19,7 +19,7 @@ template <class First, class... Rest> First add(const First first, const Rest...
 }
 
 int main(int argc, char** argv) {
-    std::cout << add(1, 2, 2.1, 100.0) << std::endl;
+    std::cout << add(1.0, 2.0, 2.1) << std::endl;
 
     
     print(10, 20);

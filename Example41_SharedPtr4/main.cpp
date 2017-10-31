@@ -27,13 +27,14 @@ public:
 
 void deleter(A *a){
     std::cout << "Nobody kills in my ship!" << std::endl;
+    delete a;
 }
 int main(int argc, char** argv) {
 
     A a("My name is A");
-    std::shared_ptr<A> a_ptr(&a,&deleter);
+    std::shared_ptr<A> a_ptr(new A("A"),&deleter);
     //std::shared_ptr<A> a_ptr(&a);
-    std::shared_ptr<A> c();
+    //std::shared_ptr<A> c();
     
     return 0;
 }

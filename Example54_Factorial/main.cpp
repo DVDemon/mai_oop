@@ -14,7 +14,7 @@ template <> uint64_t Factorial<0>(){
 template<uint64_t n>
 class fact{
     public:
-   static const uint64_t value = fact<n-1>::value * n;
+    static const uint64_t value = fact<n-1>::value * n;
 };
  
 template<>
@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     std::cout << std::chrono::duration_cast <std::chrono::microseconds>( end - begin ).count()<< std::endl;
  
     begin = std::chrono::high_resolution_clock::now();
-    uint64_t value=1;
+    volatile uint64_t value=1;
     for(int i=1;i<=50;i++) value*=i;
     std::cout << value << std::endl;
     end = std::chrono::high_resolution_clock::now();

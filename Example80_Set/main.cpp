@@ -12,8 +12,8 @@ int main()
     mySet.insert('n');
     mySet.insert('f');
     mySet.insert('i');
-    //mySet.insert('n');
-    //mySet.insert('i');
+    mySet.insert('n');
+    mySet.insert('i');
     mySet.insert('t');
     mySet.insert('y');
  

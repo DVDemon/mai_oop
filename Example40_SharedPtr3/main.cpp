@@ -29,11 +29,18 @@ int main(int argc, char** argv) {
 
     std::shared_ptr<A> a(new A("My name is A"));
     std::shared_ptr<A> b(new A("My name is B"));
-    
-    std::swap(a,b);
-    
+    std::shared_ptr<A> c;
+
+    c= a;
     a->WhoAmI();
     b->WhoAmI();
+
+    std::cout << "Swap" << std::endl;
+    std::swap(a,b);
+    
+    c->WhoAmI();
+//    a->WhoAmI();
+//    b->WhoAmI();
     
     return 0;
 }

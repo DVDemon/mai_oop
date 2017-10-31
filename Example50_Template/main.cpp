@@ -12,8 +12,9 @@ template <class T> class Print
 
 
 int main(int argc, char** argv) {
-    //Print<int> A(10);
-    //Print<const char*> B("Hello world!");
+    Print<int> A(10);
+    Print<const char*> B("Hello world!");
+    
     
     //Print<Print<int>> a(Print<int>(10));
     

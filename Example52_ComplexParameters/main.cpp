@@ -32,7 +32,7 @@ public:
         return SIZE;
     }
 
-    const TYPE operator[](size_t index) {
+    TYPE& operator[](size_t index) {
         if ((index >= 0) && (index < SIZE)) return _array[index];
         else throw BadIndexException(index, SIZE);
     }
@@ -41,8 +41,9 @@ public:
 int main(int argc, char** argv) {
 
     try {
-        Array<int, 0, 5> array;
-        for (int i = 0; i < array.size(); i++) {
+        Array<int, 0> array;
+        for (int i = 0; i <= array.size(); i++) {
+            array[i] = i;
             std::cout << "Value=" << array[i] << std::endl;
         }
     } catch (const std::exception &ex) {

@@ -32,11 +32,11 @@ class A{};
 
 int main(int argc, char** argv) {
 
-    AddFeature<A,RefCount> a;
-    AddFeature<A,RefCount> a1;
-    
+   // AddFeature<A,RefCount> a,a1,a2,a3;
+   // AddFeature<A,RefCount> a4;
+ 
     AddFeature<A,Functor> b;
-    b()()()()();
+    b()()()()()();
     
 
     AddFeature<AddFeature<A,RefCount>,Functor> c;
@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
     
     auto d=c;
     d();
-    
+
     
     return 0;
 }

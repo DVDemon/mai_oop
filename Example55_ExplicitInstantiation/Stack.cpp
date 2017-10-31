@@ -33,15 +33,15 @@ template <class T,void (*func)(T&)> MyStack<T,func>::~MyStack(void) {
         _current = _current->next;
 
         T ptr =old->item;
-        delete ptr;
-//        func(old->item);
+//        delete ptr;
+        func(old->item);
         delete old;
     }
 }
 
 
 #include "MyClass.h"
-//void deleterMyClass(MyClass&){}
+void deleterMyClass(MyClass&){}
 void deleterMyClassPtr(MyClass*& ptr) {delete ptr;}
-//template class MyStack<class MyClass,&deleterMyClass>;
+template class MyStack<class MyClass,&deleterMyClass>;
 template class MyStack<class MyClass*,&deleterMyClassPtr>;

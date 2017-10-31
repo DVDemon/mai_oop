@@ -37,6 +37,7 @@ int main(int argc, char** argv) {
     std::shared_ptr<B> b(new B());
     a->LetsLock(b);
     b->LetsLock(a);
+
     return 0;
 }
 

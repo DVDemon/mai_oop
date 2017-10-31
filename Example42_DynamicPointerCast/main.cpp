@@ -2,7 +2,7 @@
 #include <iostream>
 #include <memory>
 
-class B;
+
 
 class A {
 public:
@@ -14,22 +14,34 @@ public:
 
 class B : public A {
 public:
-    B(){};
+    B(){ b = 1;};
     void Do() override {
         std::cout << "B" << std::endl; 
     }
+
+    void DoB() {
+        std::cout << "B second function" << std::endl; 
+    }
+
+    int b;
 };
 
 class C : public A {
 public:
-    C(){};
+    C(){c="Hello!";};
     void Do() override {
         std::cout << "C" << std::endl; 
     }
+    void DoC()  {
+        std::cout << "C second function" << std::endl; 
+    }
+
+    const char* c;
 };
 
 
 int main(int argc, char** argv) {
+
 
     std::shared_ptr<B> b(new B());
     std::shared_ptr<C> c(new C());
@@ -42,7 +54,7 @@ int main(int argc, char** argv) {
 
     if(std::shared_ptr<C> ptr_c = std::dynamic_pointer_cast<C>(ptr)){
         ptr_c->Do();
-    }
+    } else std::cout << "Oops" << std::endl;
     
     return 0;
 }

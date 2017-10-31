@@ -33,6 +33,19 @@ public:
     };
 };
 
+class Cylindre : public Circle {
+private:
+    double H;
+public:
+
+    Cylindre(double r,double h) : Circle(r),H(h) {
+    };
+
+    double Volume() {
+        return Square()*H;
+    };
+};
+
 class Array {
 private:
     static const size_t SIZE = 10;
@@ -40,6 +53,7 @@ private:
 public:
 
     Array() {
+        for (int i = 0; i < SIZE; i++) array[i]=nullptr;
     }
 
     Figure*& operator[](size_t index) {
@@ -61,6 +75,7 @@ int main(int argc, char** argv) {
     array[0] = new Circle(1);
     array[1] = new Circle(2);
     array[2] = new Sphere(1);
+    array[3] = new Cylindre(1,10);
 
     for (int i = 0; i < array.size(); i++)
         if (array[i] != nullptr) {

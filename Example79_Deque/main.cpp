@@ -17,13 +17,15 @@ int main() {
     for(auto i:myDeque) std::cout << i << " ";
 
 
+    std::cout << myDeque.front() << std::endl;
     myDeque.pop_front(); // удалили первый элемент
     myDeque.pop_back(); // удалили второй элемент
-    myDeque.resize(6, "empty"); // увеличиваем размер дека до 6 элементов, новые элементы заполняются словом "empty"
+    myDeque.resize(1, "empty"); // увеличиваем размер дека до 6 элементов, новые элементы заполняются словом "empty"
 
     std::cout << "\nБыли удалены первый и последний элементы дека, вот что осталось: ";
     for (int i = 0; i < myDeque.size(); i++) {
         std::cout << myDeque[i] << " ";
     }
+    std::cout << std::endl;
     return 0;
 }

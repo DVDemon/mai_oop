@@ -51,6 +51,7 @@ private:
 public:
 
     Array() {
+        for (int i = 0; i < SIZE; i++) array[i]=nullptr;
     }
 
     Figure*& operator[](size_t index) {
@@ -75,8 +76,8 @@ int main(int argc, char** argv) {
 
     for (int i = 0; i < array.size(); i++)
         if (array[i] != nullptr) {
-            std::cout << "Square:" << array[i]->Square() << std::endl;
-            std::cout << "Volume:" << array[i]->Volume() << std::endl;
+            if(array[i]->Square()) std::cout << "Square:" << array[i]->Square() << std::endl;
+            if(array[i]->Volume()) std::cout << "Volume:" << array[i]->Volume() << std::endl;
         }
 
 

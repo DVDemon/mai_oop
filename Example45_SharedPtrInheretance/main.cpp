@@ -32,8 +32,11 @@ public:
 int main(int argc, char** argv) {
 
     {
-    std::shared_ptr<A> b(new B("My name is B!")); // This is A
-    b->Print();
+     std::shared_ptr<B> b(new B("My name is B!")); // This is A
+     std::shared_ptr<A> a = b;
+     (*a).Print();
+     a.get()->Print();
+     a->Print();
     }
     
     {

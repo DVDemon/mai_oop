@@ -21,6 +21,14 @@ int main(int argc, char** argv) {
     for(auto value:age) 
         std::cout << "Age of " <<value.first << "=" << value.second << std::endl;
 
+        //age["Иванов"]=1000;
+        auto result = age.find("Иванов");
+        if (result != age.end()) {
+            std::cout << (*result).second << std::endl;
+        } else {
+            std::cout << "Не нашел" << std::endl;
+        }
+
     return 0;
 }
 

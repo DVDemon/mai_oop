@@ -6,13 +6,11 @@
 int main() {
     std::vector<int> foo, bar;
     for (int i = 1; i <= 5; i++) {
-        
         bar.push_back(i * 10);
     }
 
     // итератор добавляющй элементы в конец foo
-    std::back_insert_iterator< std::vector<int> > 
-        back_it(foo);
+    std::back_insert_iterator< std::vector<int> >  back_it(foo);
 
     /* копируем из bar в back_it
     template<class InputIterator, class OutputIterator >

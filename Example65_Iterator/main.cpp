@@ -30,7 +30,7 @@ public:
 
     ArrayIterator<ItemType, ArrayType> & operator++() {
         //if(index==size-1) throw OutOfBoundException();
-        index--;
+        index++;
         return *this;
     }
 };
@@ -55,11 +55,11 @@ public:
     }
 
     ArrayIterator<T,DynamicArray<T>> begin() {
-        return ArrayIterator<T,DynamicArray<T>>(this,size-1,size);
+        return ArrayIterator<T,DynamicArray<T>>(this,0,size);
     }
 
     ArrayIterator<T,DynamicArray<T>> end() {
-        return ArrayIterator<T,DynamicArray<T>>(this,-1,size);
+        return ArrayIterator<T,DynamicArray<T>>(this,size,size);
     }
 
 
@@ -73,14 +73,21 @@ int main(int argc, char** argv) {
     array[1] = 8;
     array[2] = 9;
 
-    
+    auto it1 = array.begin(); ++it1;
+    std::cout << *it1 << std::endl;
+
+   // for(ArrayIterator<int,DynamicArray<int>> it=array.begin();it!=array.end();++it){
+   //     std::cout << *it << std::endl;
+   // }
+/*
     for(auto a:array)
         std::cout << a << std::endl;
     
-    
+    std::cout << std::endl;
     DynamicArray<int> array2 {1,2,3,4,5,6,7,8,9};
     for(auto a:array2)
         std::cout << a << std::endl;
+        */
     return 0;
 }
 
