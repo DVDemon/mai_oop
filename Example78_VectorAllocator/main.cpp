@@ -132,8 +132,8 @@ int main(int argc, char** argv) {
     std::copy(iter, eos, insert_iter);
 
 
-    std::ostream_iterator<Foo> out(std::cout, " ");
-    std::copy(vector.begin(), vector.end(), out);
+    //std::ostream_iterator<Foo> out(std::cout, " ");
+    //std::copy(vector.begin(), vector.end(), out);
 
 
     return 0;

@@ -34,7 +34,7 @@ public:
 
         bool hasBulka = false;
         for (auto i : items) {
-            if (dynamic_cast<ItemBulka*> (i.get())) {
+            if (std::dynamic_pointer_cast<ItemBulka> (i)) {
                 std::cout << " for your cookie" << std::endl;
                 return;
             }
@@ -70,6 +70,7 @@ int main() {
     
     m.add(std::make_shared<ItemBulka>());
     m.add(std::make_shared<ItemBulka>());
+    m.add(std::make_shared<ItemCoffe>());
     m.add(std::make_shared<ItemCoffe>());
 
     m.menu();

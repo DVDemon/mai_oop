@@ -27,12 +27,11 @@ public:
     
     void operator()() {
         std::unique_lock<std::mutex> lock(mtx); // входим в защищенную секцию
+        std::cout << "." << std::flush;
         cv.wait(lock); // ожидаем сигнала
-        
-        
+        std::cout << "Wave::do_something" << std::endl;
         do_something();
-        
-        
+        std::cout << "Wave::wave" << std::endl;
         wave(); // вызываем переопределенную функкцию
     }
 };
@@ -47,16 +46,16 @@ public:
 
     void wave() override { // передаем сигнал в следующую волну
         std::unique_lock<std::mutex> lock2(next->mtx);
-        next->cv.notify_all();
+        next->cv.notify_one();
     }
 };
 
 int main(int argc, char** argv) {
 
-    std::vector<std::shared_ptr < Wave>> ocean;
+    std::vector<std::shared_ptr<Wave>> ocean;
 
     ocean.push_back(std::shared_ptr<Wave>(new Wave(0))); // последняя волна
-    for (int i = 1; i < 100; i++)
+    for (int i = 1; i < 10; i++)
         ocean.push_back(std::shared_ptr<Wave>(new NextWave(ocean.back(),i))); // следующая волна ссылается на предыдущую
 
     {
@@ -66,7 +65,7 @@ int main(int argc, char** argv) {
         std::cout << "Press any key!" << std::endl;
         std::cin.get();
 
-        last->cv.notify_all(); // и запускаем!
+        last->cv.notify_one(); // и запускаем!
     }
         
     for (auto i : ocean) i->res.get(); // ждем пока все выполнется

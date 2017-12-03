@@ -56,6 +56,7 @@ int main(int argc, char** argv) {
     for (int i = 0; i < 100000; i++) vector[i] = nullptr;
 
     // Experiment one
+    /*
     for (int j = 0; j < 16; j++) {
         use_allocator = (j % 2 == 0);
 
@@ -65,14 +66,14 @@ int main(int argc, char** argv) {
         auto begin = std::chrono::high_resolution_clock::now();
         for (int i = 0; i < 100000; i++) vector[i] = new Item();
         auto end = std::chrono::high_resolution_clock::now();
-        std::cout << "New:" << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() ;
+        std::cout << "New:" << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() ;
         
         begin = std::chrono::high_resolution_clock::now();
         for (int i = 0; i < 100000; i++) delete vector[i];
         end = std::chrono::high_resolution_clock::now();
-        std::cout << " Delete:" << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << std::endl;
+        std::cout << " Delete:" << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << std::endl;
     }
-   
+/*/   
     // experiment two
    for (int i = 0; i < 100000; i++) vector[i] = nullptr;
 
@@ -89,9 +90,9 @@ int main(int argc, char** argv) {
             vector[i] = new Item();
         }
         auto end = std::chrono::high_resolution_clock::now();
-        std::cout << " New/Delete:" << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << std::endl;
+        std::cout << " New/Delete:" << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << std::endl;
     }
-
+//*/
     return 0;
 }
 

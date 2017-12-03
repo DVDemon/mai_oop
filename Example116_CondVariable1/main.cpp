@@ -3,7 +3,7 @@
 #include <mutex>              // std::mutex, std::unique_lock
 #include <condition_variable> // std::condition_variable
 
-std::mutex mtx;
+std::mutex mtx,prn;
 std::condition_variable cv;
 bool ready = false;
 
@@ -16,7 +16,11 @@ void print_id(int id) {
             cv.wait(lck); // unlock?
     }
     
-    std::cout << "thread " << id << '\n';
+    {
+        std::unique_lock<std::mutex> lck(prn);
+        std::cout << "thread " << id << std::endl;
+    }
+    
 }
 
 void go() {

@@ -47,7 +47,7 @@ protected:
         value += "\n\n";
 
         return value.c_str();
-        ;
+        
     }
     friend class Mailer<WorkMail>;
 public:

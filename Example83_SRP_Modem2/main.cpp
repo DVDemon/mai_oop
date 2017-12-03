@@ -11,7 +11,7 @@ class Modem {
 protected:
     bool connected;
     std::string number;
-    std::vector<int> buffer;
+    std::vector<int> buffer; // теперь тут вектор а не строка
 public:
 
     Modem() : connected(false), number("") {

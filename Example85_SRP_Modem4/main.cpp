@@ -60,7 +60,7 @@ protected:
 public:
 
     virtual void Send(int Data) {
-        buffer.push_back(Data); // buffer.append(1,Data) - not a good idea
+        buffer.push_back(Data); 
     }
 
     virtual bool NotEmpty(){
