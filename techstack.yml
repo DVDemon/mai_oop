@@ -1,11 +1,11 @@
 repo_name: DVDemon/mai_oop
-report_id: e76aa170f596b4531f181ce3dbc7f45b
+report_id: 6b7bcf76f906185e437eec48c20be613
 repo_type: Public
-timestamp: '2023-11-10T07:41:46+00:00'
+timestamp: '2023-12-14T10:12:53+00:00'
 requested_by: DVDemon
 provider: github
 branch: master
-detected_tools_count: 3
+detected_tools_count: 5
 tools:
 - name: C++
   description: Has imperative, object-oriented and generic programming features, while
@@ -17,6 +17,17 @@ tools:
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1049/cplusplus.png
   detection_source: Repo Metadata
+- name: pgvector
+  description: Open-source vector similarity search for Postgres
+  website_url: https://github.com/pgvector/pgvector/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Database Tools
+  image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source: Example04_Stream/dist/Release/GNU-MacOSX/mytext.txt
+  last_updated_by: dvdemon
+  last_updated_on: 2017-10-08 14:53:33.000000000 Z
 - name: Git
   description: Fast, scalable, distributed revision control system
   website_url: http://git-scm.com/
@@ -26,6 +37,17 @@ tools:
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
   detection_source: Repo Metadata
+- name: LangChain
+  description: Build AI apps with LLMs through composability
+  website_url: https://github.com/hwchase17/langchain
+  open_source: true
+  hosted_saas: false
+  category: Communications
+  sub_category: Large Language Model Tools
+  image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source: Example04_Stream/dist/Release/GNU-MacOSX/mytext.txt
+  last_updated_by: dvdemon
+  last_updated_on: 2017-10-08 14:53:33.000000000 Z
 - name: Shell
   description: A shell is a text-based terminal, used for manipulating programs and
     files. Shell scripts typically manage program execution.
