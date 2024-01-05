@@ -1,7 +1,8 @@
 repo_name: DVDemon/mai_oop
-report_id: 6b7bcf76f906185e437eec48c20be613
+report_id: e76aa170f596b4531f181ce3dbc7f45b
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T10:12:53+00:00'
+timestamp: '2024-01-05T08:57:46+00:00'
 requested_by: DVDemon
 provider: github
 branch: master
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1049/cplusplus.png
+  detection_source_url: https://github.com/DVDemon/mai_oop
   detection_source: Repo Metadata
 - name: pgvector
   description: Open-source vector similarity search for Postgres
@@ -25,6 +27,7 @@ tools:
   category: Data Stores
   sub_category: Database Tools
   image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/DVDemon/mai_oop/blob/master/Example04_Stream/dist/Release/GNU-MacOSX/mytext.txt
   detection_source: Example04_Stream/dist/Release/GNU-MacOSX/mytext.txt
   last_updated_by: dvdemon
   last_updated_on: 2017-10-08 14:53:33.000000000 Z
@@ -36,6 +39,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/DVDemon/mai_oop
   detection_source: Repo Metadata
 - name: LangChain
   description: Build AI apps with LLMs through composability
@@ -45,6 +49,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/DVDemon/mai_oop/blob/master/Example04_Stream/dist/Release/GNU-MacOSX/mytext.txt
   detection_source: Example04_Stream/dist/Release/GNU-MacOSX/mytext.txt
   last_updated_by: dvdemon
   last_updated_on: 2017-10-08 14:53:33.000000000 Z
@@ -57,4 +62,5 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/DVDemon/mai_oop
   detection_source: Repo Metadata
